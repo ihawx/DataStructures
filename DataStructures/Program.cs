@@ -10,6 +10,10 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
+
+            var myLL = new MyLinkedList<int>(Enumerable.Range(0,10000).ToArray());
+            Console.WriteLine(myLL.Length);
+            Console.WriteLine(myLL.FindIndex(500));
         }
     }
 }
