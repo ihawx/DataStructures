@@ -17,22 +17,14 @@ namespace DataStructures
 
         public T Dequeue()
         {
-            if (firstStack.Count == 0)
-            {
-                throw new Exception("Queue is empty");
-            }
+            
             if (secondStack.Count == 0)
             {
                 while (firstStack.Count > 1)
                 {
                     secondStack.Push(firstStack.Pop());
                 }
-                T ret = firstStack.Pop();
-                while (secondStack.Count > 0)
-                {
-                    firstStack.Push(secondStack.Pop());
-                }
-                return ret;
+                return firstStack.Pop();
             }
             else
             {
