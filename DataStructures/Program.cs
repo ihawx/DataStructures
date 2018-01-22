@@ -10,10 +10,14 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
+            var queue = new QueueTwoStacks<int>();
 
-            var myLL = new MyLinkedList<int>(Enumerable.Range(0,10000).ToArray());
-            Console.WriteLine(myLL.Length);
-            Console.WriteLine(myLL.FindIndex(500));
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+            queue.Dequeue();
+            Console.WriteLine(queue.Peek());
         }
     }
 }

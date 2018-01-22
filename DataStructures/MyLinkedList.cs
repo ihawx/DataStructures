@@ -65,12 +65,14 @@ namespace DataStructures
         /// <param name="index">Index at which it will be inserted</param>
         public void InsertAt(T data, int index)
         {
-            int length = GetLength();
-            if (index > length)
+            if (index > Length)
             {
                 throw new IndexOutOfRangeException("Index out of bounds");
             }
-            head = InsertAtInternal(head, data, index);
+            else
+            {
+                head = InsertAtInternal(head, data, index);
+            }
         }
 
 
@@ -80,7 +82,7 @@ namespace DataStructures
         /// <param name="collection">Collection</param>
         public void InsertAll(ICollection<T> collection)
         {
-            foreach(var element in collection)
+            foreach (var element in collection)
             {
                 Insert(element);
             }
@@ -125,8 +127,7 @@ namespace DataStructures
         /// <returns></returns>
         public T GetAtPosition(int index)
         {
-            int length = GetLength() - 1;
-            if (index > length || index < 0)
+            if (index > Length - 1 || index < 0)
             {
                 throw new IndexOutOfRangeException("Index out of bounds");
             }
