@@ -10,14 +10,11 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            var queue = new QueueTwoStacks<int>();
-
-            queue.Enqueue(1);
-            queue.Enqueue(2);
-            queue.Enqueue(3);
-            queue.Enqueue(4);
-            queue.Dequeue();
-            Console.WriteLine(queue.Peek());
+            var stack = new MyStack<int>();
+            stack.Push(3);
+            stack.Push(2);
+            stack.Push(1);
+            Console.WriteLine(stack.Count);
         }
     }
 }

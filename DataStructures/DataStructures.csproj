@@ -42,10 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyLinkedList.cs" />
+    <Compile Include="MyDataStructures\MyLinkedList.cs" />
+    <Compile Include="MyDataStructures\MyStack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueueTwoStacks.cs" />
+    <Compile Include="Others\QueueTwoStacks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
